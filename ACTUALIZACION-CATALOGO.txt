@@ -1,0 +1,7 @@
+Actualización del catálogo MESPLEDE
+- Se añadieron PASSWORD GENERATOR, DESK CLOCK, INVASORES y MESPLEDE SPACE ROCKS como disponibles.
+- RASTA PLAYER ahora muestra imagen y precio informativo.
+- Precios son informativos; no hay carrito, checkout ni compra integrada.
+- Los proyectos existentes permanecen en desarrollo.
+- Plataforma/versión de INVASORES quedan por confirmar.
+- No se añadieron enlaces de descarga.

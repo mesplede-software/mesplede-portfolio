@@ -25,3 +25,14 @@
 .shot-placeholder{min-height:190px;border:1px dashed #40513f;background:linear-gradient(135deg,#101811,#0a0e0b);display:grid;place-items:center;color:#778579;font:10px "DM Mono",monospace;text-align:center;padding:20px}
 .detail-note{color:#87958a;font-size:11px;line-height:1.8;margin-top:18px}
 @media(max-width:620px){.detail-wrap{padding:55px 6% 75px}.detail-hero{grid-template-columns:1fr}.detail-code{width:62px;height:62px}.feature-grid,.shot-grid{grid-template-columns:1fr}.detail-hero h1{font-size:40px}}
+
+/* Product artwork cards and individual detail visuals */
+.app-art{height:210px;position:relative;overflow:hidden;background:#080d09;border:1px solid var(--line);margin-bottom:18px}
+.app-art img{width:100%;height:100%;object-fit:contain;display:block;transition:transform .35s ease}
+.app-card:hover .app-art img{transform:scale(1.035)}
+.app-art .status{position:absolute;right:12px;top:12px;background:#080d09e8}
+.app-card{overflow:hidden}
+.detail-art{max-width:420px;justify-self:end;background:#080d09;border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.detail-art img{display:block;width:100%;height:auto;max-height:420px;object-fit:contain}
+.detail-price{color:var(--accent);font-weight:700}
+@media(max-width:700px){.app-art{height:190px}.detail-art{justify-self:stretch;max-width:100%}}

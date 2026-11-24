@@ -6,10 +6,10 @@ function render(filter="all"){
   const shown=apps.filter(app=>filter==="all"||app.status===filter);
   grid.innerHTML=shown.length?shown.map(app=>`
     <article class="app-card">
-      <div class="app-top"><div class="app-icon">${escapeHTML(app.code)}</div><span class="status ${app.status==="available"?"available":""}">${escapeHTML(app.statusLabel)}</span></div>
+      <div class="app-art">${app.image?`<img src="${escapeHTML(app.image)}" alt="Imagen de ${escapeHTML(app.name)}" loading="lazy">`:`<div class="app-icon">${escapeHTML(app.code)}</div>`}<span class="status ${app.status==="available"?"available":""}">${escapeHTML(app.statusLabel)}</span></div>
       <div class="app-category">${escapeHTML(app.category)}</div>
       <h3>${escapeHTML(app.name)}</h3><p>${escapeHTML(app.description)}</p>
-      <div class="app-bottom"><span>${escapeHTML(app.platform||"SOFTWARE")}</span><a href="app.html?id=${encodeURIComponent(app.id)}" aria-label="Ver ${escapeHTML(app.name)}">Ver aplicación ↗</a></div>
+      <div class="app-bottom"><span>${escapeHTML(app.platform||"SOFTWARE")}${app.price?` · ${escapeHTML(app.price)}`:""}</span><a href="app.html?id=${encodeURIComponent(app.id)}" aria-label="Ver ${escapeHTML(app.name)}">Ver aplicación ↗</a></div>
     </article>`).join(""):`<div class="empty-state">No hay aplicaciones en esta categoría todavía.</div>`;
 }
 function escapeHTML(value){return String(value??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
